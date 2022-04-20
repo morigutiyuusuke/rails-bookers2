@@ -14,7 +14,21 @@
           </tr>
         </thead>
         <tbody>
-          
+          <%= @books.each do |b| %>
+          <tr>
+            <td>
+              <%= link_to user_path(b.user.id) do %>
+               <%= image_tag b.user.get_profile_image("40x40") %>
+               <% end %>
+            </td>
+            <td>
+              <%= link_to book_path(b.id) do %>
+               <%= b.title %>
+              <% end %>
+            </td>
+            <td><%= b.body %></td>
+          </tr>
+          <% end %>
         </tbody>
       </table> 
     </div>
