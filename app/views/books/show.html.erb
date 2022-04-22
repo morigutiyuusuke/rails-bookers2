@@ -8,10 +8,10 @@
         <tbody>
           <tr>
             <td>
-              <%#= link_to user_path(@user.id) do %>
-              <%#= image_tag @user.get_profile_image("40x40") %><br>
-              <%#= @user.name %>
-              <%# end %>
+              <%= link_to user_path(@user.id) do %>
+              <%= image_tag @user.get_profile_image("40x40") %><br>
+              <%= @user.name %>
+              <% end %>
             </td>
             <td>
               
